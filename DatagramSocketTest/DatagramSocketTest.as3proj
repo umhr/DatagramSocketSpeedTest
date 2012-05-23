@@ -5,7 +5,7 @@
     <movie outputType="Application" />
     <movie input="" />
     <movie path="bin\DatagramSocketTest.swf" />
-    <movie fps="30" />
+    <movie fps="60" />
     <movie width="400" />
     <movie height="440" />
     <movie version="3" />
