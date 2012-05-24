@@ -11,7 +11,7 @@ package
 	 */
 	public class Main extends Sprite 
 	{
-		
+		private var _numericStepper:NumericStepper;
 		public function Main():void 
 		{
 			if (stage) init();
@@ -29,15 +29,15 @@ package
 		private function setFPSStepper():void 
 		{
 			new Label(this, 250, 415, "FPS:");
-			var numericStepper:NumericStepper = new NumericStepper(this, 280, 415, onNumericStepper);
-			numericStepper.minimum = 1;
-			numericStepper.maximum = 120;
-			numericStepper.value = stage.frameRate;
+			_numericStepper = new NumericStepper(this, 280, 415, onNumericStepper);
+			_numericStepper.minimum = 1;
+			_numericStepper.maximum = 120;
+			_numericStepper.value = stage.frameRate;
 		}
 		
 		private function onNumericStepper(event:Event):void 
 		{
-			stage.frameRate = event.target.value;
+			stage.frameRate = _numericStepper.value;
 		}
 	}
 	
